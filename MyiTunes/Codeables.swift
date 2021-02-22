@@ -29,8 +29,8 @@ struct Result: Codable {
     let collectionArtistViewURL, collectionViewURL, trackViewURL: String?
     let previewURL: String?
     let artworkUrl30, artworkUrl60, artworkUrl100: String?
-    let collectionPrice, trackPrice, trackRentalPrice, collectionHDPrice: Double?
-    let trackHDPrice, trackHDRentalPrice: Double?
+    let collectionPrice, trackPrice, trackRentalPrice, collectionHDPrice: String?
+    let trackHDPrice, trackHDRentalPrice: String?
     let releaseDate: String?
     let collectionExplicitness, trackExplicitness: String?
     let discCount, discNumber, trackCount, trackNumber: Int?

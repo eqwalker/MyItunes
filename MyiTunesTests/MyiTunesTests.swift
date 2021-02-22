@@ -65,7 +65,7 @@ class MyiTunesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testNetworkCall() throws {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "itunes.apple.com"
@@ -87,12 +87,4 @@ class MyiTunesTests: XCTestCase {
             .store(in: &cancellableSet)
         waitForExpectations(timeout: 2.0, handler: nil)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

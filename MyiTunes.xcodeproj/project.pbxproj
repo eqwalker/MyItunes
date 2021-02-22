@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		07B0ABF225E336A800449DA7 /* MyiTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0ABF125E336A800449DA7 /* MyiTunesTests.swift */; };
 		07B0ABFD25E336A800449DA7 /* MyiTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0ABFC25E336A800449DA7 /* MyiTunesUITests.swift */; };
 		07B0AC0E25E3375300449DA7 /* Codeables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC0D25E3375300449DA7 /* Codeables.swift */; };
+		07B0AC1325E34E8600449DA7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC1225E34E8600449DA7 /* Track.swift */; };
+		07B0AC1B25E3535900449DA7 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC1A25E3535900449DA7 /* TrackView.swift */; };
+		07B0AC2725E357C900449DA7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 07B0AC2625E357C900449DA7 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		07B0ABFC25E336A800449DA7 /* MyiTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyiTunesUITests.swift; sourceTree = "<group>"; };
 		07B0ABFE25E336A800449DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B0AC0D25E3375300449DA7 /* Codeables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codeables.swift; sourceTree = "<group>"; };
+		07B0AC1225E34E8600449DA7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		07B0AC1A25E3535900449DA7 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B0AC2725E357C900449DA7 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,8 @@
 				07B0ABE525E336A800449DA7 /* MyiTunes.xcdatamodeld */,
 				07B0ABE025E336A800449DA7 /* Preview Content */,
 				07B0AC0D25E3375300449DA7 /* Codeables.swift */,
+				07B0AC1225E34E8600449DA7 /* Track.swift */,
+				07B0AC1A25E3535900449DA7 /* TrackView.swift */,
 			);
 			path = MyiTunes;
 			sourceTree = "<group>";
@@ -155,6 +163,9 @@
 			dependencies = (
 			);
 			name = MyiTunes;
+			packageProductDependencies = (
+				07B0AC2625E357C900449DA7 /* SDWebImageSwiftUI */,
+			);
 			productName = MyiTunes;
 			productReference = 07B0ABD725E336A800449DA7 /* MyiTunes.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 07B0ABCE25E336A800449DA7;
+			packageReferences = (
+				07B0AC2525E357C900449DA7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 07B0ABD825E336A800449DA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,9 +284,11 @@
 			files = (
 				07B0ABE425E336A800449DA7 /* Persistence.swift in Sources */,
 				07B0ABDD25E336A800449DA7 /* ContentView.swift in Sources */,
+				07B0AC1B25E3535900449DA7 /* TrackView.swift in Sources */,
 				07B0ABDB25E336A800449DA7 /* MyiTunesApp.swift in Sources */,
 				07B0ABE725E336A800449DA7 /* MyiTunes.xcdatamodeld in Sources */,
 				07B0AC0E25E3375300449DA7 /* Codeables.swift in Sources */,
+				07B0AC1325E34E8600449DA7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07B0AC2525E357C900449DA7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07B0AC2625E357C900449DA7 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07B0AC2525E357C900449DA7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		07B0ABE525E336A800449DA7 /* MyiTunes.xcdatamodeld */ = {
