@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "05F4D491-46EF-45C1-8D69-180663DEB319"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18995F12-E1C1-4AE9-9218-36207ECBF442"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyiTunesTests/MyiTunesTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18995F12-E1C1-4AE9-9218-36207ECBF442 - aca8702129e5128f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyiTunesTests.MyiTunesTests.testExample() throws -&gt; ()"
+                  moduleName = "MyiTunesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eric/iostest/MyiTunes/MyiTunesTests/MyiTunesTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1728">
+               </Location>
+               <Location
+                  uuid = "18995F12-E1C1-4AE9-9218-36207ECBF442 - fb2758b85da7b44e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in MyiTunesTests.MyiTunesTests.testExample() throws -&gt; ()"
+                  moduleName = "MyiTunesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eric/iostest/MyiTunes/MyiTunesTests/MyiTunesTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "18995F12-E1C1-4AE9-9218-36207ECBF442 - a9e8683aef75d518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (MyiTunes.MyiTunesResponse) -&gt; () in MyiTunesTests.MyiTunesTests.testExample() throws -&gt; ()"
+                  moduleName = "MyiTunesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eric/iostest/MyiTunes/MyiTunesTests/MyiTunesTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D4793B5-5935-443E-8714-24B0E8FB2F92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyiTunesTests/MyiTunesTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
