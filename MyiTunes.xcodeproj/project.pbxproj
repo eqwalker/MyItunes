@@ -17,8 +17,11 @@
 		07B0ABFD25E336A800449DA7 /* MyiTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0ABFC25E336A800449DA7 /* MyiTunesUITests.swift */; };
 		07B0AC0E25E3375300449DA7 /* Codeables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC0D25E3375300449DA7 /* Codeables.swift */; };
 		07B0AC1325E34E8600449DA7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC1225E34E8600449DA7 /* Track.swift */; };
-		07B0AC1B25E3535900449DA7 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC1A25E3535900449DA7 /* TrackView.swift */; };
+		07B0AC1B25E3535900449DA7 /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0AC1A25E3535900449DA7 /* TracksView.swift */; };
 		07B0AC2725E357C900449DA7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 07B0AC2625E357C900449DA7 /* SDWebImageSwiftUI */; };
+		730CCEFF25E40F4000298FE2 /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730CCEFE25E40F4000298FE2 /* TracksViewModel.swift */; };
+		730CCF0425E40FA600298FE2 /* TracksRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730CCF0325E40FA600298FE2 /* TracksRespository.swift */; };
+		730CCF0925E4126E00298FE2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730CCF0825E4126E00298FE2 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +58,10 @@
 		07B0ABFE25E336A800449DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B0AC0D25E3375300449DA7 /* Codeables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codeables.swift; sourceTree = "<group>"; };
 		07B0AC1225E34E8600449DA7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		07B0AC1A25E3535900449DA7 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		07B0AC1A25E3535900449DA7 /* TracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
+		730CCEFE25E40F4000298FE2 /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
+		730CCF0325E40FA600298FE2 /* TracksRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRespository.swift; sourceTree = "<group>"; };
+		730CCF0825E4126E00298FE2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,10 @@
 				07B0ABE025E336A800449DA7 /* Preview Content */,
 				07B0AC0D25E3375300449DA7 /* Codeables.swift */,
 				07B0AC1225E34E8600449DA7 /* Track.swift */,
-				07B0AC1A25E3535900449DA7 /* TrackView.swift */,
+				07B0AC1A25E3535900449DA7 /* TracksView.swift */,
+				730CCEFE25E40F4000298FE2 /* TracksViewModel.swift */,
+				730CCF0325E40FA600298FE2 /* TracksRespository.swift */,
+				730CCF0825E4126E00298FE2 /* Network.swift */,
 			);
 			path = MyiTunes;
 			sourceTree = "<group>";
@@ -282,10 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730CCF0925E4126E00298FE2 /* Network.swift in Sources */,
 				07B0ABE425E336A800449DA7 /* Persistence.swift in Sources */,
 				07B0ABDD25E336A800449DA7 /* ContentView.swift in Sources */,
-				07B0AC1B25E3535900449DA7 /* TrackView.swift in Sources */,
+				07B0AC1B25E3535900449DA7 /* TracksView.swift in Sources */,
 				07B0ABDB25E336A800449DA7 /* MyiTunesApp.swift in Sources */,
+				730CCF0425E40FA600298FE2 /* TracksRespository.swift in Sources */,
+				730CCEFF25E40F4000298FE2 /* TracksViewModel.swift in Sources */,
 				07B0ABE725E336A800449DA7 /* MyiTunes.xcdatamodeld in Sources */,
 				07B0AC0E25E3375300449DA7 /* Codeables.swift in Sources */,
 				07B0AC1325E34E8600449DA7 /* Track.swift in Sources */,
@@ -535,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LFV8HSPZ74;
 				INFOPLIST_FILE = MyiTunesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LFV8HSPZ74;
 				INFOPLIST_FILE = MyiTunesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

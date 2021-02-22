@@ -10,49 +10,6 @@ import XCTest
 
 @testable import MyiTunes
 
-enum NetworkError: Error {
-    case failed
-    case decode(Error)
-    case noAccess
-}
-
-struct Network<Model: Decodable> {
-    let backgroundQueue = DispatchQueue(label: "MyItunes")
-
-    let session: URLSession
-    public init(session: URLSession) {
-        self.session = session
-    }
-    public func publisher(request: URLRequest) -> AnyPublisher<Model, Error> {
-        return session.dataTaskPublisher(for: request)
-            .mapError { urlError in
-                NetworkError.decode(urlError)
-            }
-            .tryMap { output -> Data in
-                guard let response = output.response as? HTTPURLResponse else {
-                    throw URLError(.badServerResponse)
-                }
-                if (400...499) ~= response.statusCode {
-                    throw NetworkError.noAccess
-                }
-                
-                if response.statusCode >= 500 {
-                    throw NetworkError.failed
-                }
-
-                return output.data
-            }
-            .map {
-                return $0
-            }
-            .decode(type: Model.self, decoder: JSONDecoder())
-            .subscribe(on: backgroundQueue)
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
-    }
-}
-
-
 class MyiTunesTests: XCTestCase {
 
     var cancellableSet: Set<AnyCancellable> = []
@@ -63,6 +20,20 @@ class MyiTunesTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testDisplayPrice() {
+        let price = 5.33
+        let expected = "$5.33"
+        let actual = displayPrice(price: price)
+        XCTAssertEqual(expected, actual)
+    }
+
+    func testDisplayDate() {
+        let date = Date.distantPast
+        let expected = "Dec 31, 0001"
+        let actual = displayDate(date: date)
+        XCTAssertEqual(expected, actual)
     }
 
     func testNetworkCall() throws {

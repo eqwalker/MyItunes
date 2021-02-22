@@ -29,13 +29,28 @@ extension Track {
     }
 }
 
+func displayPrice(price: Double) -> String {
+    let formatter = NumberFormatter()
+    formatter.locale = Locale.current // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
+    formatter.numberStyle = .currency
+    return formatter.string(from: price as NSNumber? ?? NSNumber(0.0)) ?? "0.0"
+}
+
+func displayDate(date: Date) -> String {
+    // MMM d, yyyy
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+    dateFormatter.dateFormat = "MMM d, yyyy"
+    return dateFormatter.string(from: date)
+}
+
 extension Track {
     static func toTrack(result: Result) -> Track {
-        return Track(artistName: result.artistName ?? "" ,
-                     trackName: result.trackName ?? "",
-                     releaseDate: result.releaseDate ?? "",
-                     primaryGenreName: result.primaryGenreName ?? "",
-                     trackPrice: result.trackPrice ?? "",
+        return Track(artistName: result.artistName ?? "Artist Name Unavailable" ,
+                     trackName: result.trackName ?? "Track Name Unavailable",
+                     releaseDate: displayDate(date: result.releaseDate ?? Date.distantPast),
+                     primaryGenreName: result.primaryGenreName ?? "Genre Name Unavailable",
+                     trackPrice: displayPrice(price: result.trackPrice ?? 0.0),
                      artworkUrl100: result.artworkUrl100 ?? "")
     }
 }

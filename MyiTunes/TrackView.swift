@@ -8,11 +8,11 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct TrackView: View {
-    let tracks: [Track]
+struct TracksView: View {
+    @ObservedObject var tracksViewModel: TracksViewModel
     var body: some View {
         List {
-            ForEach(tracks, id: \.self) { track in
+            ForEach(tracksViewModel.tracks, id: \.self) { track in
                 TrackCellView(track: track)
             }
         }
@@ -25,7 +25,7 @@ struct TrackCellView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(track.artistName)
-                .font(.title)
+                .font(.headline)
             WebImage(url: URL(string: track.artworkUrl100))
                 // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
                 .onSuccess { image, data, cacheType in
@@ -43,6 +43,7 @@ struct TrackCellView: View {
                 .scaledToFit()
             HStack {
                 Text(track.trackName)
+                Spacer()
                 Text(track.trackPrice)
             }
             Text(track.releaseDate)
@@ -63,7 +64,7 @@ struct TrackView_Previews: PreviewProvider {
         TrackCellView(track: Track.mock)
             .previewLayout(.sizeThatFits)
         
-        TrackView(tracks: [Track.mock, Track.mock])
+        TracksView(tracksViewModel: TracksViewModel(tracks: [Track.mock, Track.mock]))
             .previewLayout(.sizeThatFits)
     }
 }
